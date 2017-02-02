@@ -1,0 +1,6 @@
+DanhMuc!_FilterDatabase,=DanhMuc!$A$5:$U$45,
+Area,=DanhMuc!$N$6:$P$43,
+AB!Print_Area,=AB!$A$1:$U$48,
+BiaHangMuc!Print_Area,=BiaHangMuc!$A$1:$R$43,
+DanhMuc!Print_Area,=DanhMuc!$B:$M,
+PYC!Print_Area,=PYC!$A$1:$U$30,
