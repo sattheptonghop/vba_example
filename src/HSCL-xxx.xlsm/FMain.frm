@@ -1,10 +1,10 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} FMain 
    Caption         =   "Cay Cau Giay - beta"
-   ClientHeight    =   5280
+   ClientHeight    =   5670
    ClientLeft      =   45
    ClientTop       =   435
-   ClientWidth     =   3195
+   ClientWidth     =   3225
    OleObjectBlob   =   "FMain.frx":0000
    StartUpPosition =   1  'CenterOwner
    WhatsThisButton =   -1  'True
@@ -17,15 +17,15 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 
-Private Sub F5active_Click()
-    Call Click
-End Sub
+
 
 '
 '   Main
 '
 Private Sub UserForm_Initialize()
     RefEdit1.Value = Selection.Address
+    XlCalAut.Value = Application.Calculation
+    bCopyToNew.Value = False
 End Sub
 
 Private Sub RefEdit1_Change()
@@ -50,6 +50,14 @@ Private Sub F5_Click()
     FMain.Hide
     Call Run(Range(RefEdit1.Value), "F5")
     FMain.Show
+End Sub
+
+Private Sub XlCalAut_Click()
+    BoCalAut = XlCalAut.Value
+End Sub
+
+Private Sub bCopyToNew_Click()
+    CopyToNew = bCopyToNew.Value
 End Sub
 
 Private Sub xoa_Click()
